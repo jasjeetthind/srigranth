@@ -22,7 +22,7 @@
     background: var(--bg);
     color: var(--text);
     line-height: 1.5;
-    padding: 40px 16px 80px;
+    padding: 24px 16px 60px;
   }
   .container {
     max-width: 1200px;
@@ -43,9 +43,15 @@
       flex-direction: column;
     }
   }
+  .header-row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
   header {
-    text-align: center;
-    margin-bottom: 40px;
+    text-align: left;
+    margin: 0;
   }
   header h1 {
     font-size: 1.9rem;
@@ -117,7 +123,7 @@
     display: flex;
     justify-content: center;
     gap: 12px;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
     flex-wrap: wrap;
   }
   nav.jump-nav a {
@@ -148,19 +154,20 @@
   }
   .profile {
     text-align: center;
-    margin-bottom: 32px;
+    margin: 0;
+    flex-shrink: 0;
   }
   .profile img {
-    width: 180px;
-    height: 180px;
+    width: 120px;
+    height: 120px;
     object-fit: cover;
     border-radius: 50%;
     border: 3px solid var(--card-bg);
     box-shadow: 0 2px 8px rgba(0,0,0,0.12);
   }
   .profile figcaption {
-    margin-top: 10px;
-    font-size: 0.9rem;
+    margin-top: 8px;
+    font-size: 0.8rem;
     color: var(--muted);
     font-weight: 600;
   }
@@ -168,15 +175,17 @@
 </head>
 <body>
   <div class="container">
-    <figure class="profile">
-      <img src="jasjeet-photo.jpg" alt="Jasjeet Thind">
-      <figcaption>Jasjeet Thind, Berkeley CA</figcaption>
-    </figure>
+    <div class="header-row">
+      <figure class="profile">
+        <img src="jasjeet-photo.jpg" alt="Jasjeet Thind">
+        <figcaption>Jasjeet Thind, Berkeley CA</figcaption>
+      </figure>
 
-    <header>
-      <h1>Nutrition Reference Sheet</h1>
-      <p>Vegetarian protein sources and bioavailable iron sources</p>
-    </header>
+      <header>
+        <h1>Nutrition Reference Sheet</h1>
+        <p>Real food sources of bioavailable nutrients</p>
+      </header>
+    </div>
 
     <nav class="jump-nav" aria-label="Section navigation">
       <a class="protein-link" href="#protein-sources">Vegetarian Protein Sources</a>
