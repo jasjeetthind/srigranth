@@ -25,8 +25,23 @@
     padding: 40px 16px 80px;
   }
   .container {
-    max-width: 780px;
+    max-width: 1200px;
     margin: 0 auto;
+  }
+  .tables-row {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+  }
+  .tables-row section {
+    flex: 1 1 0;
+    min-width: 0;
+    margin-bottom: 0;
+  }
+  @media (max-width: 800px) {
+    .tables-row {
+      flex-direction: column;
+    }
   }
   header {
     text-align: center;
@@ -131,10 +146,33 @@
   section[id] {
     scroll-margin-top: 24px;
   }
+  .profile {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .profile img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--card-bg);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  }
+  .profile figcaption {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: var(--muted);
+    font-weight: 600;
+  }
 </style>
 </head>
 <body>
   <div class="container">
+    <figure class="profile">
+      <img src="jasjeet-photo.jpg" alt="Jasjeet Thind">
+      <figcaption>Jasjeet Thind, Berkeley CA</figcaption>
+    </figure>
+
     <header>
       <h1>Nutrition Reference Sheet</h1>
       <p>Vegetarian protein sources and bioavailable iron sources</p>
@@ -145,6 +183,7 @@
       <a class="iron-link" href="#iron-sources">Bioavailable Iron Sources</a>
     </nav>
 
+    <div class="tables-row">
     <section id="protein-sources">
       <h2 class="protein">Top Vegetarian Protein Sources</h2>
       <table>
@@ -210,6 +249,7 @@
         </tbody>
       </table>
     </section>
+    </div>
   </div>
 </body>
 </html>
