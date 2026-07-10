@@ -1,1 +1,176 @@
-hi there
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nutrition Reference: Protein &amp; Iron Sources</title>
+<style>
+  :root {
+    --bg: #f7f5f2;
+    --card-bg: #ffffff;
+    --text: #2b2b2b;
+    --muted: #6b6b6b;
+    --accent: #2f6f4f;
+    --accent-2: #a8452f;
+    --border: #e3ddd4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+    padding: 40px 16px 80px;
+  }
+  .container {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  header h1 {
+    font-size: 1.9rem;
+    margin: 0 0 8px;
+  }
+  header p {
+    color: var(--muted);
+    margin: 0;
+    font-size: 0.95rem;
+  }
+  section {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px 28px 28px;
+    margin-bottom: 32px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  section h2 {
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 4px;
+  }
+  section h2.protein { color: var(--accent); }
+  section h2.iron { color: var(--accent-2); }
+  .subtitle {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-bottom: 18px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    text-align: left;
+    padding: 9px 10px;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.95rem;
+  }
+  th {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--muted);
+    border-bottom: 2px solid var(--border);
+  }
+  td.amount, th.amount {
+    text-align: right;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+  }
+  tr:last-child td { border-bottom: none; }
+  .complete {
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .footnote {
+    margin-top: 16px;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  .footnote .dot {
+    color: var(--accent);
+    font-weight: 700;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Nutrition Reference Sheet</h1>
+      <p>Vegetarian protein sources and bioavailable iron sources</p>
+    </header>
+
+    <section>
+      <h2 class="protein">Top Vegetarian Protein Sources</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Food</th>
+            <th class="amount">Protein</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Greek Yogurt, 1 cup <span class="complete">*</span></td><td class="amount">19g</td></tr>
+          <tr><td>2</td><td>Edamame (soy bean), 1 cup <span class="complete">*</span></td><td class="amount">18g</td></tr>
+          <tr><td>3</td><td>Legumes &ndash; Lentils / Black Beans / Chickpeas / Kidney Beans, etc., 1 cup</td><td class="amount">16g</td></tr>
+          <tr><td>4</td><td>Cottage cheese, 1/2 cup <span class="complete">*</span></td><td class="amount">13g</td></tr>
+          <tr><td>5</td><td>Yogurt, 1 cup <span class="complete">*</span></td><td class="amount">10g</td></tr>
+          <tr><td>6</td><td>Tofu, 3 ounces <span class="complete">*</span></td><td class="amount">9g</td></tr>
+          <tr><td>7</td><td>Soy Milk, 1 cup <span class="complete">*</span></td><td class="amount">9g</td></tr>
+          <tr><td>8</td><td>Hemp Hearts, 3 tbsp <span class="complete">*</span></td><td class="amount">9g</td></tr>
+          <tr><td>9</td><td>Amaranth, 1 cup <span class="complete">*</span></td><td class="amount">9g</td></tr>
+          <tr><td>10</td><td>Paneer / Cheddar Cheese / Parmesan / Ricotta / Swiss, 1 ounce <span class="complete">*</span></td><td class="amount">8g</td></tr>
+          <tr><td>11</td><td>Milk (Dairy), 1 cup <span class="complete">*</span></td><td class="amount">8g</td></tr>
+          <tr><td>12</td><td>Pumpkin Seeds, 3 tbsp</td><td class="amount">8g</td></tr>
+          <tr><td>13</td><td>Peanut Butter, 2 tbsp</td><td class="amount">8g</td></tr>
+          <tr><td>14</td><td>Green peas, 1 cup</td><td class="amount">8g</td></tr>
+          <tr><td>15</td><td>Almond Butter, 2 tbsp</td><td class="amount">7g</td></tr>
+          <tr><td>16</td><td>Oats, 1/2 cup</td><td class="amount">7g</td></tr>
+        </tbody>
+      </table>
+      <p class="footnote"><span class="dot">*</span> Complete protein</p>
+    </section>
+
+    <section>
+      <h2 class="iron">Top Sources of Bioavailable Iron</h2>
+      <p class="subtitle">Pair non-heme sources with vitamin C to boost absorption</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Food</th>
+            <th class="amount">Iron</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Clams (~8)</td><td class="amount">23 mg</td></tr>
+          <tr><td>Oysters (~5&ndash;7)</td><td class="amount">7 mg</td></tr>
+          <tr><td>Mussels (~6&ndash;7)</td><td class="amount">7 mg</td></tr>
+          <tr><td>Legumes (red lentils, cannellini, kala chana, kidney, garbanzo, pinto), 1 cup</td><td class="amount">5&ndash;7 mg</td></tr>
+          <tr><td>Grass-Fed Bison (6 oz)</td><td class="amount">5.5 mg</td></tr>
+          <tr><td>Pumpkin Seeds, sprouted (4 tbsp)</td><td class="amount">4 mg</td></tr>
+          <tr><td>Hemp Hearts (3 tbsp)</td><td class="amount">4 mg</td></tr>
+          <tr><td>Swiss Chard (cooked, 1 cup)</td><td class="amount">4 mg</td></tr>
+          <tr><td>Blackstrap Molasses (1 tbsp)</td><td class="amount">3.6 mg</td></tr>
+          <tr><td>Grass-Fed Beef (6 oz)</td><td class="amount">3.5 mg</td></tr>
+          <tr><td>Tofu (3/4 cup)</td><td class="amount">3.4 mg</td></tr>
+          <tr><td>Green Moong Dosa (whole, 3/4 cup, 3 dosas)</td><td class="amount">3 mg</td></tr>
+          <tr><td>Dark Chocolate (100% cacao, 1 oz)</td><td class="amount">3 mg</td></tr>
+          <tr><td>Moong Dal (1 cup)</td><td class="amount">2.8 mg</td></tr>
+          <tr><td>Quinoa (1 cup)</td><td class="amount">2.8 mg</td></tr>
+          <tr><td>Unhulled Tahini (unhulled sesame seeds, 2 tbsp)</td><td class="amount">2.6 mg</td></tr>
+          <tr><td>Collard Greens (sauteed, 1 cup)</td><td class="amount">2.5 mg</td></tr>
+          <tr><td>Chia Seed (soaked, 3 tbsp)</td><td class="amount">2.3 mg</td></tr>
+          <tr><td>Kale (sauteed, 1 cup)</td><td class="amount">1.9 mg</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+</body>
+</html>
