@@ -15,6 +15,7 @@
     --border: #e3ddd4;
   }
   * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
   body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -97,6 +98,39 @@
     color: var(--accent);
     font-weight: 700;
   }
+  nav.jump-nav {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+  nav.jump-nav a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--card-bg);
+    color: var(--text);
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  }
+  nav.jump-nav a.protein-link:hover,
+  nav.jump-nav a.protein-link:focus {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+  }
+  nav.jump-nav a.iron-link:hover,
+  nav.jump-nav a.iron-link:focus {
+    background: var(--accent-2);
+    border-color: var(--accent-2);
+    color: #fff;
+  }
+  section[id] {
+    scroll-margin-top: 24px;
+  }
 </style>
 </head>
 <body>
@@ -106,7 +140,12 @@
       <p>Vegetarian protein sources and bioavailable iron sources</p>
     </header>
 
-    <section>
+    <nav class="jump-nav" aria-label="Section navigation">
+      <a class="protein-link" href="#protein-sources">Vegetarian Protein Sources</a>
+      <a class="iron-link" href="#iron-sources">Bioavailable Iron Sources</a>
+    </nav>
+
+    <section id="protein-sources">
       <h2 class="protein">Top Vegetarian Protein Sources</h2>
       <table>
         <thead>
@@ -138,7 +177,7 @@
       <p class="footnote"><span class="dot">*</span> Complete protein</p>
     </section>
 
-    <section>
+    <section id="iron-sources">
       <h2 class="iron">Top Sources of Bioavailable Iron</h2>
       <p class="subtitle">Pair non-heme sources with vitamin C to boost absorption</p>
       <table>
