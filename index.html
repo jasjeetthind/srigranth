@@ -43,11 +43,20 @@
       flex-direction: column;
     }
   }
-  .header-row {
+  .page-layout {
     display: flex;
-    align-items: center;
-    gap: 24px;
-    margin-bottom: 24px;
+    align-items: flex-start;
+    gap: 32px;
+  }
+  .main-content {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+  @media (max-width: 700px) {
+    .page-layout {
+      flex-direction: column;
+      align-items: center;
+    }
   }
   header {
     text-align: left;
@@ -188,6 +197,11 @@
     margin: 0;
     flex-shrink: 0;
   }
+  .profile figcaption strong {
+    display: block;
+    color: var(--text);
+    font-size: 0.85rem;
+  }
   .profile img {
     width: 120px;
     height: 120px;
@@ -206,34 +220,34 @@
 </head>
 <body>
   <div class="container">
-    <div class="header-row">
+    <div class="page-layout">
       <figure class="profile">
         <img src="jasjeet-photo.jpg" alt="Jasjeet Thind">
-        <figcaption>Jasjeet Thind, Berkeley CA</figcaption>
+        <figcaption>Jasjeet Thind<br>Berkeley, CA</figcaption>
       </figure>
 
-      <header>
-        <h1>Nutrition Guide</h1>
-        <p>Real food sources of bioavailable nutrients</p>
-      </header>
-    </div>
+      <div class="main-content">
+        <header>
+          <h1>Nutrition Guide</h1>
+          <p>Real food sources of bioavailable nutrients</p>
+        </header>
 
-    <nav class="top-nav" aria-label="Main navigation">
-      <div class="nav-tile">
-        <span class="nav-tile-label">Vegetarian</span>
-        <div class="nav-tile-links">
-          <a class="protein-link" href="#protein-sources">Protein</a>
-        </div>
-      </div>
-      <div class="nav-tile">
-        <span class="nav-tile-label">All Food</span>
-        <div class="nav-tile-links">
-          <a class="iron-link" href="#iron-sources">Iron</a>
-        </div>
-      </div>
-    </nav>
+        <nav class="top-nav" aria-label="Main navigation">
+          <div class="nav-tile">
+            <span class="nav-tile-label">Vegetarian</span>
+            <div class="nav-tile-links">
+              <a class="protein-link" href="#protein-sources">Protein</a>
+            </div>
+          </div>
+          <div class="nav-tile">
+            <span class="nav-tile-label">All Food</span>
+            <div class="nav-tile-links">
+              <a class="iron-link" href="#iron-sources">Iron</a>
+            </div>
+          </div>
+        </nav>
 
-    <div class="tables-row">
+        <div class="tables-row">
     <section id="protein-sources">
       <h2 class="protein">Top Vegetarian Protein Sources</h2>
       <table>
@@ -268,37 +282,40 @@
 
     <section id="iron-sources">
       <h2 class="iron">Top Sources of Bioavailable Iron</h2>
-      <p class="subtitle">Pair non-heme sources with vitamin C to boost absorption</p>
       <table>
         <thead>
           <tr>
-            <th>Food</th>
+            <th>#</th>
+            <th>Food <span class="dot">*</span></th>
             <th class="amount">Iron</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td>Clams (~8)</td><td class="amount">23 mg</td></tr>
-          <tr><td>Oysters (~5&ndash;7)</td><td class="amount">7 mg</td></tr>
-          <tr><td>Mussels (~6&ndash;7)</td><td class="amount">7 mg</td></tr>
-          <tr><td>Legumes (red lentils, cannellini, kala chana, kidney, garbanzo, pinto), 1 cup</td><td class="amount">5&ndash;7 mg</td></tr>
-          <tr><td>Grass-Fed Bison (6 oz)</td><td class="amount">5.5 mg</td></tr>
-          <tr><td>Pumpkin Seeds, sprouted (4 tbsp)</td><td class="amount">4 mg</td></tr>
-          <tr><td>Hemp Hearts (3 tbsp)</td><td class="amount">4 mg</td></tr>
-          <tr><td>Swiss Chard (cooked, 1 cup)</td><td class="amount">4 mg</td></tr>
-          <tr><td>Blackstrap Molasses (1 tbsp)</td><td class="amount">3.6 mg</td></tr>
-          <tr><td>Grass-Fed Beef (6 oz)</td><td class="amount">3.5 mg</td></tr>
-          <tr><td>Tofu (3/4 cup)</td><td class="amount">3.4 mg</td></tr>
-          <tr><td>Green Moong Dosa (whole, 3/4 cup, 3 dosas)</td><td class="amount">3 mg</td></tr>
-          <tr><td>Dark Chocolate (100% cacao, 1 oz)</td><td class="amount">3 mg</td></tr>
-          <tr><td>Moong Dal (1 cup)</td><td class="amount">2.8 mg</td></tr>
-          <tr><td>Quinoa (1 cup)</td><td class="amount">2.8 mg</td></tr>
-          <tr><td>Unhulled Tahini (unhulled sesame seeds, 2 tbsp)</td><td class="amount">2.6 mg</td></tr>
-          <tr><td>Collard Greens (sauteed, 1 cup)</td><td class="amount">2.5 mg</td></tr>
-          <tr><td>Chia Seed (soaked, 3 tbsp)</td><td class="amount">2.3 mg</td></tr>
-          <tr><td>Kale (sauteed, 1 cup)</td><td class="amount">1.9 mg</td></tr>
+          <tr><td>1</td><td>Clams (~8)</td><td class="amount">23 mg</td></tr>
+          <tr><td>2</td><td>Oysters (~5&ndash;7)</td><td class="amount">7 mg</td></tr>
+          <tr><td>3</td><td>Mussels (~6&ndash;7)</td><td class="amount">7 mg</td></tr>
+          <tr><td>4</td><td>Legumes (red lentils, cannellini, kala chana, kidney, garbanzo, pinto), 1 cup</td><td class="amount">5&ndash;7 mg</td></tr>
+          <tr><td>5</td><td>Grass-Fed Bison (6 oz)</td><td class="amount">5.5 mg</td></tr>
+          <tr><td>6</td><td>Pumpkin Seeds, sprouted (4 tbsp)</td><td class="amount">4 mg</td></tr>
+          <tr><td>7</td><td>Hemp Hearts (3 tbsp)</td><td class="amount">4 mg</td></tr>
+          <tr><td>8</td><td>Swiss Chard (cooked, 1 cup)</td><td class="amount">4 mg</td></tr>
+          <tr><td>9</td><td>Blackstrap Molasses (1 tbsp)</td><td class="amount">3.6 mg</td></tr>
+          <tr><td>10</td><td>Grass-Fed Beef (6 oz)</td><td class="amount">3.5 mg</td></tr>
+          <tr><td>11</td><td>Tofu (3/4 cup)</td><td class="amount">3.4 mg</td></tr>
+          <tr><td>12</td><td>Green Moong Dosa (whole, 3/4 cup, 3 dosas)</td><td class="amount">3 mg</td></tr>
+          <tr><td>13</td><td>Dark Chocolate (100% cacao, 1 oz)</td><td class="amount">3 mg</td></tr>
+          <tr><td>14</td><td>Moong Dal (1 cup)</td><td class="amount">2.8 mg</td></tr>
+          <tr><td>15</td><td>Quinoa (1 cup)</td><td class="amount">2.8 mg</td></tr>
+          <tr><td>16</td><td>Unhulled Tahini (unhulled sesame seeds, 2 tbsp)</td><td class="amount">2.6 mg</td></tr>
+          <tr><td>17</td><td>Collard Greens (sauteed, 1 cup)</td><td class="amount">2.5 mg</td></tr>
+          <tr><td>18</td><td>Chia Seed (soaked, 3 tbsp)</td><td class="amount">2.3 mg</td></tr>
+          <tr><td>19</td><td>Kale (sauteed, 1 cup)</td><td class="amount">1.9 mg</td></tr>
         </tbody>
       </table>
+      <p class="footnote"><span class="dot">*</span> Pair vegetarian food sources with fruit high in vitamin C to boost iron absorption</p>
     </section>
+        </div>
+      </div>
     </div>
   </div>
 </body>
