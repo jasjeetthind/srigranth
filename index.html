@@ -121,36 +121,42 @@
   }
   nav.top-nav {
     display: flex;
-    gap: 14px;
-    margin-left: auto;
-    flex-shrink: 0;
+    justify-content: center;
+    gap: 20px;
     flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 28px;
   }
   .nav-tile {
     background: var(--bg);
     border: 1px solid var(--border);
     border-radius: 10px;
-    padding: 10px 14px;
+    padding: 14px 22px;
+    min-width: 280px;
+    flex: 1 1 280px;
+    max-width: 420px;
   }
   .nav-tile-label {
     display: block;
-    font-size: 0.72rem;
+    text-align: center;
+    font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.04em;
     color: var(--muted);
     font-weight: 700;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
   .nav-tile-links {
     display: flex;
-    gap: 8px;
+    justify-content: center;
+    gap: 10px;
     flex-wrap: wrap;
   }
   .nav-tile-links a {
     text-decoration: none;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-weight: 600;
-    padding: 7px 14px;
+    padding: 8px 18px;
     border-radius: 999px;
     border: 1px solid var(--border);
     background: var(--card-bg);
@@ -206,26 +212,26 @@
         <figcaption>Jasjeet Thind, Berkeley CA</figcaption>
       </figure>
 
-      <nav class="top-nav" aria-label="Main navigation">
-        <div class="nav-tile">
-          <span class="nav-tile-label">Vegetarian</span>
-          <div class="nav-tile-links">
-            <a class="protein-link" href="#protein-sources">Protein</a>
-          </div>
-        </div>
-        <div class="nav-tile">
-          <span class="nav-tile-label">All Food</span>
-          <div class="nav-tile-links">
-            <a class="iron-link" href="#iron-sources">Iron</a>
-          </div>
-        </div>
-      </nav>
+      <header>
+        <h1>Nutrition Guide</h1>
+        <p>Real food sources of bioavailable nutrients</p>
+      </header>
     </div>
 
-    <header>
-      <h1>Nutrition Guide</h1>
-      <p>Real food sources of bioavailable nutrients</p>
-    </header>
+    <nav class="top-nav" aria-label="Main navigation">
+      <div class="nav-tile">
+        <span class="nav-tile-label">Vegetarian</span>
+        <div class="nav-tile-links">
+          <a class="protein-link" href="#protein-sources">Protein</a>
+        </div>
+      </div>
+      <div class="nav-tile">
+        <span class="nav-tile-label">All Food</span>
+        <div class="nav-tile-links">
+          <a class="iron-link" href="#iron-sources">Iron</a>
+        </div>
+      </div>
+    </nav>
 
     <div class="tables-row">
     <section id="protein-sources">
