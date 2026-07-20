@@ -14,6 +14,7 @@
     --accent-2: #a8452f;
     --accent-3: #3d6b9c;
     --accent-4: #7a4fa0;
+    --accent-5: #b8860b;
     --border: #e3ddd4;
   }
   * { box-sizing: border-box; }
@@ -90,6 +91,7 @@
   section h2.iron { color: var(--accent-2); }
   section h2.leucine { color: var(--accent-3); }
   section h2.calcium { color: var(--accent-4); }
+  section h2.zinc { color: var(--accent-5); }
   .group-header {
     font-size: 1.05rem;
     text-transform: uppercase;
@@ -213,6 +215,12 @@
     border-color: var(--accent-4);
     color: #fff;
   }
+  .nav-tile-links a.zinc-link:hover,
+  .nav-tile-links a.zinc-link:focus {
+    background: var(--accent-5);
+    border-color: var(--accent-5);
+    color: #fff;
+  }
   .nav-tile-empty {
     font-size: 0.85rem;
     color: var(--muted);
@@ -275,6 +283,7 @@
               <a class="iron-link" href="#iron-sources">Iron</a>
               <a class="calcium-link" href="#calcium-sources">Calcium</a>
               <a class="leucine-link" href="#leucine-foods">Leucine</a>
+              <a class="zinc-link" href="#zinc-sources">Zinc</a>
             </div>
           </div>
         </nav>
@@ -468,6 +477,43 @@
           <tr><td>20</td><td>Cheddar cheese, 1 oz</td><td class="amount">0.55g</td></tr>
         </tbody>
       </table>
+    </section>
+          </div>
+          <div class="tables-row">
+    <section id="zinc-sources">
+      <h2 class="zinc">Top Sources of Zinc <span class="dot">*</span></h2>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Food</th>
+            <th class="amount">Zinc</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Oysters, cooked, 3 oz (about 6 medium)</td><td class="amount">66.8mg</td></tr>
+          <tr><td>2</td><td>Beef chuck short ribs, cooked, 3 oz</td><td class="amount">10.2mg</td></tr>
+          <tr><td>3</td><td>Beef shank, cooked, 3 oz</td><td class="amount">8.9mg</td></tr>
+          <tr><td>4</td><td>Alaska king crab, cooked, 3 oz</td><td class="amount">6.5mg</td></tr>
+          <tr><td>5</td><td>Bison, cooked, 3 oz</td><td class="amount">7.3mg</td></tr>
+          <tr><td>6</td><td>Lamb shoulder, cooked, 3 oz</td><td class="amount">5.9mg</td></tr>
+          <tr><td>7</td><td>Pumpkin seeds, roasted, 1 oz</td><td class="amount">2.2mg</td></tr>
+          <tr><td>8</td><td>Sunflower seeds, toasted, 1 oz</td><td class="amount">1.8mg</td></tr>
+          <tr><td>9</td><td>Pork shoulder, cooked, 3 oz</td><td class="amount">3.0mg</td></tr>
+          <tr><td>10</td><td>Chicken, dark meat, cooked, 3 oz</td><td class="amount">2.4mg</td></tr>
+          <tr><td>11</td><td>Cashews, roasted, 1 oz</td><td class="amount">1.6mg</td></tr>
+          <tr><td>12</td><td>Chickpeas, cooked, 1 cup</td><td class="amount">2.5mg</td></tr>
+          <tr><td>13</td><td>Lentils, cooked, 1 cup</td><td class="amount">2.5mg</td></tr>
+          <tr><td>14</td><td>Black beans, cooked, 1 cup</td><td class="amount">1.9mg</td></tr>
+          <tr><td>15</td><td>Kidney beans, cooked, 1 cup</td><td class="amount">1.9mg</td></tr>
+          <tr><td>16</td><td>Swiss cheese, 1 oz</td><td class="amount">1.2mg</td></tr>
+          <tr><td>17</td><td>Greek yogurt, plain, 1 cup</td><td class="amount">1.3mg</td></tr>
+          <tr><td>18</td><td>Milk, 1 cup</td><td class="amount">1.0mg</td></tr>
+          <tr><td>19</td><td>Eggs, 2 large</td><td class="amount">1.0mg</td></tr>
+          <tr><td>20</td><td>Almonds, roasted, 1 oz</td><td class="amount">0.9mg</td></tr>
+        </tbody>
+      </table>
+      <p class="footnote"><span class="dot">*</span> Unfortified food sources; legume/grain zinc has lower bioavailability due to phytates</p>
     </section>
           </div>
         </div>
